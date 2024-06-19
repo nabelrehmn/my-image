@@ -1,0 +1,104 @@
+﻿@model MyImageProject.Models.ShippingInfo
+
+@{
+    ViewData["Title"] = "Edit Shippment";
+}
+
+<!-- Content Header (Page Header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">
+                    <strong>EDIT SHIPPING DETAILS</strong>
+                </h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-action="Index">Home</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Content Header (Page Header) -->
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-9">
+            <div class="card justify-content-center">
+                <div class="card-header">
+                    <a asp-action="Index" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i>
+                        <h3 class="card-title mr-2">Back to List</h3>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit" class="datepickers">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="ShippingAddress" for="ShippingAddress" class="form-label">Shipping Address:</label>
+                                        <textarea asp-for="ShippingAddress" type="text" class="form-control" id="txtshippingaddress" placeholder="Wrire Shipping Address Here." rows="1"></textarea>
+                                        <span asp-validation-for="ShippingAddress" class="text-danger font-weight-bold"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="ShippingMethod" for="ShippingMethod" class="form-label">Shipping Method:</label>
+                                        <select asp-for="ShippingMethod" class="form-control text-center" id="selectshippingmethod">
+                                            <option selected disabled> -- Select Method -- </option>
+                                            <option value="Standard">Standard</option>
+                                            <option value="Expedited">Expedited</option>
+                                            <option value="Overnight">Overnight</option>
+                                            <option value="Two-Day">Two-Day</option>
+                                            <option value="Same-Day">Same-Day</option>
+                                            <option value="Domestic">Domestic</option>
+                                        </select>
+                                        <span asp-validation-for="ShippingMethod" class="text-danger font-weight-bold"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="TracingNumber" for="TracingNumber" class="form-label">Tracing Number:</label>
+                                        <input asp-for="TracingNumber" type="text" class="form-control" id="txttrackingnumber" placeholder="Wrire Tracking Number." />
+                                        <span asp-validation-for="TracingNumber" class="text-danger font-weight-bold"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="DeliveryDate" for="DateAndTime" class="form-label">Date And Time:</label>
+                                        <div class="input-group date" id="id_0">
+                                            <input asp-for="DeliveryDate" type="text" class="form-control" id="dateandtime" placeholder="MM/DD/YYYY hh:mm:ss" />
+                                        </div>
+                                        <span asp-validation-for="DeliveryDate" class="text-danger font-weight-bold"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="OrderId" class="form-label">Order Id</label>
+                                        <input asp-for="OrderId" type="text" class="form-control" placeholder="Please Enter Order Id" />
+                                        <span asp-validation-for="OrderId" class="text-danger font-weight-bold"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <input type="hidden" asp-for="ShippingId"/>
+                                    <div class="form-group">
+                                        <button type="submit" id="btnsubmit" class="btn btn-primary form-control">Update Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
