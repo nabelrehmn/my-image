@@ -1,0 +1,75 @@
+﻿@model IEnumerable<MyImageProject.Models.PrintSize>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Content Header (Page Header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">
+                    <strong>SIZES DETAILS</strong>
+                </h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Home</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Content Header (Page Header) -->
+<!-- Content Header -->
+<section class="content">
+    <!-- Container Fluid -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <a asp-action="Create" class="btn btn-primary">
+                            <i class="fas fa-plus-circle"></i>
+                            <h3 class="card-title mr-2">Add Sizes</h3>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <!-------- DataTable Work -------->
+                        <table id="example1" class="table table-bordered table-striped text-center">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.SizeName</td>
+                                        <td>@item.SizeDescription</td>
+                                        <td>@item.Price</td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.SizeId" id="btnedit" class="btn btn-primary">Edit</a>
+                                            <a asp-action="Delete" asp-route-id="@item.SizeId" id="btndelete" class="btn btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Container Fluid -->
+</section>
+<!-- Content Header -->
+@section Scripts {
+
+    <script src="~/files/shippinginfofiles/JSWork.js"></script>
+}

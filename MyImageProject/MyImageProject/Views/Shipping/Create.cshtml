@@ -15,7 +15,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a asp-action="Index">Home</a></li>
+                    <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Home</a></li>
                 </ol>
             </div>
         </div>
@@ -41,7 +41,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label asp-for="ShippingAddress" for="ShippingAddress" class="form-label">Shipping Address:</label>
-                                        <textarea asp-for="ShippingAddress" type="text" class="form-control" id="txtshippingaddress" placeholder="Wrire Shipping Address Here." rows="1"></textarea>
+                                        <textarea asp-for="ShippingAddress" type="text" class="form-control" id="txtshippingaddress" placeholder="Enter Shipping Address Here." rows="1"></textarea>
                                         <span asp-validation-for="ShippingAddress" class="text-danger font-weight-bold"></span>
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label asp-for="TracingNumber" for="TracingNumber" class="form-label">Tracing Number:</label>
-                                        <input asp-for="TracingNumber" type="text" class="form-control" id="txttrackingnumber" placeholder="Wrire Tracking Number." />
+                                        <input asp-for="TracingNumber" type="text" class="form-control" id="txttrackingnumber" placeholder="Enter Tracking Number." />
                                         <span asp-validation-for="TracingNumber" class="text-danger font-weight-bold"></span>
                                     </div>
                                 </div>

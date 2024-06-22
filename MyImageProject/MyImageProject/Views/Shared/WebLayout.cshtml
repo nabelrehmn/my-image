@@ -54,7 +54,7 @@
 					<div class="row">
 						<div class="col-sm-12 text-left menu-1">
 							<ul>
-								<li class="active"><a href="">Home</a></li>
+								<li class="active"><a asp-action="Index" asp-controller="Website">Home</a></li>
 								<li class="has-dropdown">
 									<a href="">Men</a>
 									<ul class="dropdown">
@@ -71,14 +71,8 @@
 								
 								<li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
 							</ul>
-							<partial name="_LoginPartial">
-							@if (SignInManager.IsSignedIn(User)){
-							@if (User.IsInRole("admin"))
-								{
-									<a asp-action="Index" asp-controller="Dashboard"><h3>Dashboard</h3></a>
-								}
-							}
 						</div>
+						<partial name="_LoginPartial">
 					</div>
 				</div>
 			</div>
@@ -107,9 +101,9 @@
 		</nav>
 	</div>
 
-    <div class="containe-fluid">
-        @RenderBody()
-    </div>
+	<div class="">
+		@RenderBody()
+	</div>
 
 	<footer id="colorlib-footer" role="contentinfo">
 		<div class="container">

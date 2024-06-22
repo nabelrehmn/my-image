@@ -1,0 +1,78 @@
+﻿@model MyImageProject.Models.PrintSize
+
+@{
+    ViewData["Title"] = "Edit Size";
+}
+
+<!-- Content Header (Page Header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">
+                    <strong>EDIT SIZE DETAILS</strong>
+                </h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Home</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Content Header (Page Header) -->
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-9">
+            <div class="card justify-content-center">
+                <div class="card-header">
+                    <a asp-action="Index" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i>
+                        <h3 class="card-title mr-2">Back to List</h3>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit" class="datepickers">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="SizeName" for="SizeName" class="form-label">Size Name:</label>
+                                        <input asp-for="SizeName" type="text" class="form-control" id="txtsizename" placeholder="Enter Size Name Here.">
+                                        <span asp-validation-for="SizeName" class="text-danger font-weight-bold"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Price" for="Price" class="form-label">Price:</label>
+                                        <input asp-for="Price" type="text" class="form-control" id="txtprice" placeholder="Enter Price Here.">
+                                        <span asp-validation-for="Price" class="text-danger font-weight-bold"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="SizeDescription" for="SizeDescription" class="form-label">Size Description:</label>
+                                        <textarea asp-for="SizeDescription" type="text" class="form-control" id="txtsizedescription" placeholder="Enter Size Description Here." rows="2"></textarea>
+                                        <span asp-validation-for="SizeDescription" class="text-danger font-weight-bold"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mt-5">
+                                    <input type="hidden" asp-for="SizeId"/>
+                                    <div class="form-group">
+                                        <button type="submit" id="btnsubmit" class="btn btn-primary form-control">Update Size</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

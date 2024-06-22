@@ -51,15 +51,15 @@ namespace MyImageProject.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "f36407fd-8bcd-4a2f-b283-e3b9b0643f3c",
-                            ConcurrencyStamp = "b8539815-2662-4f44-a275-a92b7212efa9",
+                            Id = "7a7b9633-c693-48ea-bc6b-6bb86a2f44ea",
+                            ConcurrencyStamp = "a74b734b-e3a0-472e-9fde-21f551ab8f06",
                             Name = "admin",
                             NormalizedName = "admin"
                         },
                         new
                         {
-                            Id = "08136ef8-f783-4208-b79f-e94d4082faba",
-                            ConcurrencyStamp = "1ac9b06e-bbcf-4270-8e68-4321db1f6067",
+                            Id = "66fddd5b-9815-4557-b799-2365c22486d6",
+                            ConcurrencyStamp = "27b76f5c-3550-464d-811e-5dadac1db335",
                             Name = "client",
                             NormalizedName = "client"
                         });
@@ -428,6 +428,10 @@ namespace MyImageProject.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SizeDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SizeName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("SizeId");

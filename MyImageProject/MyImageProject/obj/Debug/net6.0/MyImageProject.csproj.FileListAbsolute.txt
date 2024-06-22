@@ -570,3 +570,4 @@ D:\Csharp Projects All\EProject\my-image\MyImageProject\MyImageProject\obj\Debug
 D:\Csharp Projects All\EProject\my-image\MyImageProject\MyImageProject\obj\Debug\net6.0\MyImageProject.pdb
 D:\Csharp Projects All\EProject\my-image\MyImageProject\MyImageProject\obj\Debug\net6.0\MyImageProject.genruntimeconfig.cache
 D:\Csharp Projects All\EProject\my-image\MyImageProject\MyImageProject\obj\Debug\net6.0\ref\MyImageProject.dll
+D:\Csharp Projects All\EProject\my-image\MyImageProject\MyImageProject\obj\Debug\net6.0\MyImageProject.sourcelink.json
