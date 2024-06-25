@@ -51,15 +51,15 @@ namespace MyImageProject.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "7a7b9633-c693-48ea-bc6b-6bb86a2f44ea",
-                            ConcurrencyStamp = "a74b734b-e3a0-472e-9fde-21f551ab8f06",
+                            Id = "50a93bdc-02fe-4d78-bccb-6c0b47113f27",
+                            ConcurrencyStamp = "ff531d9f-e05c-4bb4-b18c-51e30dd35144",
                             Name = "admin",
                             NormalizedName = "admin"
                         },
                         new
                         {
-                            Id = "66fddd5b-9815-4557-b799-2365c22486d6",
-                            ConcurrencyStamp = "27b76f5c-3550-464d-811e-5dadac1db335",
+                            Id = "a6088e65-8f2f-4e4e-a43d-d29743295616",
+                            ConcurrencyStamp = "0d37d604-4127-4d24-9889-471d1b0702bf",
                             Name = "client",
                             NormalizedName = "client"
                         });
@@ -259,6 +259,44 @@ namespace MyImageProject.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("MyImageProject.Models.Contact", b =>
+                {
+                    b.Property<int>("ContactId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContactId"), 1L, 1);
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("varchar(20)")
+                        .HasColumnName("Email");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("varchar(10)")
+                        .HasColumnName("FirstName");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("varchar(10)")
+                        .HasColumnName("LastName");
+
+                    b.Property<string>("Massage")
+                        .IsRequired()
+                        .HasColumnType("varchar(max)")
+                        .HasColumnName("Massage");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("varchar(max)")
+                        .HasColumnName("Subject");
+
+                    b.HasKey("ContactId");
+
+                    b.ToTable("Contact");
+                });
+
             modelBuilder.Entity("MyImageProject.Models.CreditCard", b =>
                 {
                     b.Property<int>("CreditCardId")
@@ -292,6 +330,31 @@ namespace MyImageProject.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("CreditCard");
+                });
+
+            modelBuilder.Entity("MyImageProject.Models.Gallery", b =>
+                {
+                    b.Property<int>("GalleryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GalleryId"), 1L, 1);
+
+                    b.Property<string>("GalleryName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TotalPrice")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("GalleryId");
+
+                    b.ToTable("Gallery");
                 });
 
             modelBuilder.Entity("MyImageProject.Models.Order", b =>

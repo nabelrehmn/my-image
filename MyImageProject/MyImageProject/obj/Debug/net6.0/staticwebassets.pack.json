@@ -8373,8 +8373,16 @@
       "PackagePath": "staticwebassets\\assets\\web\\fonts\\ionicons\\fonts\\ionicons.woff2"
     },
     {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\Image1.png",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\Image1.png"
+    },
+    {
       "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\about.jpg",
       "PackagePath": "staticwebassets\\assets\\web\\images\\about.jpg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\art-sea.jpg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\art-sea.jpg"
     },
     {
       "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\blog-1.jpg",
@@ -8411,6 +8419,46 @@
     {
       "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\cover-img-1.jpg",
       "PackagePath": "staticwebassets\\assets\\web\\images\\cover-img-1.jpg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\digital-art.jpeg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\digital-art.jpeg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\image10.jpeg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\image10.jpeg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\image2.jpeg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\image2.jpeg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\image3.jpg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\image3.jpg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\image4.jpeg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\image4.jpeg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\image5.jpeg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\image5.jpeg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\image6.jpeg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\image6.jpeg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\image7.jpeg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\image7.jpeg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\image8.jpeg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\image8.jpeg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\image9.jpeg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\image9.jpeg"
     },
     {
       "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\img_bg_1.jpg",
@@ -8499,6 +8547,10 @@
     {
       "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\men.jpg",
       "PackagePath": "staticwebassets\\assets\\web\\images\\men.jpg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\paint-art.jpg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\paint-art.jpg"
     },
     {
       "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\person1.jpg",

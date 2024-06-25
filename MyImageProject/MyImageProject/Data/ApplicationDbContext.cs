@@ -18,6 +18,8 @@ namespace MyImageProject.Data
         public DbSet<PrintSize> PrintSizes { get; set; }
         public DbSet<CreditCard> CreditCard { get; set; }
         public DbSet<ShippingInfo> ShippingInfo { get; set; }
+        public DbSet<Gallery> Gallery { get; set; }
+        public DbSet<Contact> Contact { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -4,7 +4,7 @@
 @inject SignInManager<AppUsers> SignInManager
 @inject UserManager<AppUsers> UserManager
 
-<ul class="navbar-nav text-left">
+<ul class="navbar-nav text-left ml-auto">
 @if (SignInManager.IsSignedIn(User))
 {
         @if(User.IsInRole("admin"))
@@ -34,9 +34,6 @@ else
 {
     <li class="nav-item">
         <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </li>
-    <li class="nav-item">
-        <p class="mt-2 mb-0">|</p>
     </li>
     <li class="nav-item">
         <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>

@@ -41,14 +41,14 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label asp-for="SizeName" for="SizeName" class="form-label">Size Name:</label>
-                                        <input asp-for="SizeName" type="text" class="form-control" id="txtsizename" placeholder="Enter Size Name Here.">
+                                        <input asp-for="SizeName" type="text" class="form-control" id="txtsizename" placeholder="Enter Size Name Here." required>
                                         <span asp-validation-for="SizeName" class="text-danger font-weight-bold"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label asp-for="Price" for="Price" class="form-label">Price:</label>
-                                        <input asp-for="Price" type="text" class="form-control" id="txtprice" placeholder="Enter Price Here.">
+                                        <input asp-for="Price" type="text" class="form-control" id="txtprice" placeholder="Enter Price Here." required>
                                         <span asp-validation-for="Price" class="text-danger font-weight-bold"></span>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label asp-for="SizeDescription" for="SizeDescription" class="form-label">Size Description:</label>
-                                        <textarea asp-for="SizeDescription" type="text" class="form-control" id="txtsizedescription" placeholder="Enter Size Description Here." rows="2"></textarea>
+                                        <textarea asp-for="SizeDescription" type="text" class="form-control" id="txtsizedescription" placeholder="Enter Size Description Here." rows="2" required></textarea>
                                         <span asp-validation-for="SizeDescription" class="text-danger font-weight-bold"></span>
                                     </div>
                                 </div>

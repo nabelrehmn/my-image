@@ -41,14 +41,14 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label asp-for="ShippingAddress" for="ShippingAddress" class="form-label">Shipping Address:</label>
-                                        <textarea asp-for="ShippingAddress" type="text" class="form-control" id="txtshippingaddress" placeholder="Enter Shipping Address Here." rows="1"></textarea>
+                                        <textarea asp-for="ShippingAddress" type="text" class="form-control" id="txtshippingaddress" placeholder="Enter Shipping Address Here." rows="1" required></textarea>
                                         <span asp-validation-for="ShippingAddress" class="text-danger font-weight-bold"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label asp-for="ShippingMethod" for="ShippingMethod" class="form-label">Shipping Method:</label>
-                                        <select asp-for="ShippingMethod" class="form-control text-center" id="selectshippingmethod">
+                                        <select asp-for="ShippingMethod" class="form-control text-center" id="selectshippingmethod" required>
                                             <option selected disabled> -- Select Method -- </option>
                                             <option value="Standard">Standard</option>
                                             <option value="Expedited">Expedited</option>
@@ -65,7 +65,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label asp-for="TracingNumber" for="TracingNumber" class="form-label">Tracing Number:</label>
-                                        <input asp-for="TracingNumber" type="text" class="form-control" id="txttrackingnumber" placeholder="Enter Tracking Number." />
+                                        <input asp-for="TracingNumber" type="text" class="form-control" id="txttrackingnumber" placeholder="Enter Tracking Number." required/>
                                         <span asp-validation-for="TracingNumber" class="text-danger font-weight-bold"></span>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@
                                     <div class="form-group">
                                         <label asp-for="DeliveryDate" for="DateAndTime" class="form-label">Date And Time:</label>
                                         <div class="input-group date" id="id_0">
-                                            <input asp-for="DeliveryDate" type="text" class="form-control" id="dateandtime" placeholder="MM/DD/YYYY hh:mm:ss" />
+                                            <input asp-for="DeliveryDate" type="text" class="form-control" id="dateandtime" placeholder="MM/DD/YYYY hh:mm:ss" required/>
                                         </div>
                                         <span asp-validation-for="DeliveryDate" class="text-danger font-weight-bold"></span>
                                     </div>
@@ -83,7 +83,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label asp-for="OrderId" class="form-label">Order Id</label>
-                                        <input asp-for="OrderId" type="text" class="form-control" placeholder="Please Enter Order Id" />
+                                        <input asp-for="OrderId" type="text" class="form-control" placeholder="Please Enter Order Id" required/>
                                         <span asp-validation-for="OrderId" class="text-danger font-weight-bold"></span>
                                     </div>
                                 </div>
