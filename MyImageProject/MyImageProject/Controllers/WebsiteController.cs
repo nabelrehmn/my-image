@@ -42,19 +42,10 @@ namespace MyImageProject.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Contact(Contact contact)
+		public async Task<IActionResult> Contact(Contact contact)
 		{
-			Contact Contact = new Contact
-			{
-                FirstName = contact.FirstName,
-                LastName = contact.LastName,
-                Email = contact.Email,
-                Subject = contact.Subject,
-				Massage = contact.Massage
-			};
-
-            Db_context.Add(Contact);
-            Db_context.SaveChanges();
+            await Db_context.AddAsync(contact);
+            await Db_context.SaveChangesAsync();
 			return RedirectToAction("Contact");
 		}
 	}

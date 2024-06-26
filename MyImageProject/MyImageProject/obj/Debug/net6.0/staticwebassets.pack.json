@@ -8417,12 +8417,24 @@
       "PackagePath": "staticwebassets\\assets\\web\\images\\brand-5.jpg"
     },
     {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\cover-image.jpg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\cover-image.jpg"
+    },
+    {
       "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\cover-img-1.jpg",
       "PackagePath": "staticwebassets\\assets\\web\\images\\cover-img-1.jpg"
     },
     {
       "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\digital-art.jpeg",
       "PackagePath": "staticwebassets\\assets\\web\\images\\digital-art.jpeg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\graphic-design.jpeg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\graphic-design.jpeg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\hand-painting.jpeg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\hand-painting.jpeg"
     },
     {
       "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\image10.jpeg",
@@ -8563,6 +8575,10 @@
     {
       "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\person3.jpg",
       "PackagePath": "staticwebassets\\assets\\web\\images\\person3.jpg"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\wall-painting.jpeg",
+      "PackagePath": "staticwebassets\\assets\\web\\images\\wall-painting.jpeg"
     },
     {
       "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\assets\\web\\images\\women.jpg",
@@ -8987,6 +9003,22 @@
     {
       "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\files\\contact\\JSWork.js",
+      "PackagePath": "staticwebassets\\files\\contact\\JSWork.js"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\files\\order\\JSWork.js",
+      "PackagePath": "staticwebassets\\files\\order\\JSWork.js"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\files\\payment\\JSWork.js",
+      "PackagePath": "staticwebassets\\files\\payment\\JSWork.js"
+    },
+    {
+      "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\files\\printsize\\JSWork.js",
+      "PackagePath": "staticwebassets\\files\\printsize\\JSWork.js"
     },
     {
       "Id": "D:\\Csharp Projects All\\EProject\\my-image\\MyImageProject\\MyImageProject\\wwwroot\\files\\shippinginfofiles\\JSWork.js",

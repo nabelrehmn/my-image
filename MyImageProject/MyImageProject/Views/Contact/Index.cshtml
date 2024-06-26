@@ -1,0 +1,80 @@
+﻿@model IEnumerable<MyImageProject.Models.Contact>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Content Header (Page Header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">
+                    <strong>CONTACT DETAILS</strong>
+                </h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Home</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Content Header (Page Header) -->
+<!-- Content Header -->
+<section class="content">
+    <!-- Container Fluid -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <a asp-action="Index" asp-controller="Dashboard" class="btn btn-primary">
+                            <i class="fas fa-arrow-left"></i>
+                            <h3 class="card-title mr-2">Back to Dashboard</h3>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <!-------- DataTable Work -------->
+                        <table id="example1" class="table table-bordered table-striped text-center">
+                            <thead>
+                                <tr>
+                                    <th>FirstName</th>
+                                    <th>LastName</th>
+                                    <th>Email</th>
+                                    <th>Subject</th>
+                                    <th>Message</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.FirstName</td>
+                                        <td>@item.LastName</td>
+                                        <td>@item.Email</td>
+                                        <td>@item.Subject</td>
+                                        <td>@item.Massage</td>
+                                        <td>
+                                            <a asp-action="Delete" asp-route-id="@item.ContactId" id="btndelete" class="btn btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Container Fluid -->
+</section>
+<!-- Content Header -->
+@section Scripts {
+
+    <script src="~/files/contact/JSWork.js"></script>
+}
+
+

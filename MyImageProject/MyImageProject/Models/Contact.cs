@@ -17,10 +17,9 @@ namespace MyImageProject.Models
 		[Required]
 		public string Email { get; set; }
 		[Column("Subject", TypeName = "varchar(max)")]
-		[Required]
 		public string? Subject { get; set; }
 		[Column("Massage", TypeName = "varchar(max)")]
 		[Required]
-		public string Massage { get; set; }
+		public string Massage { get; set; } = "";
 	}
 }

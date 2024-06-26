@@ -58,7 +58,14 @@
 							<ul>
 								<li class="active"><a asp-action="Index">Home</a></li>
 								<li><a asp-action="Gallery">Gallery</a></li>
-								<li><a asp-action="Custom">Custom</a></li>
+								@if (User.IsInRole("admin"))
+								{
+									<li><a asp-action="Custom">Custom</a></li>
+								}
+								else if (User.IsInRole("client"))
+								{
+									<li><a asp-action="Custom">Custom</a></li>
+								}
 								<li><a asp-action="About">About</a></li>
 								<li><a asp-action="Contact">Contact</a></li>
 							</ul>
@@ -105,6 +112,10 @@
 										}
 									</ul>
 								</li>
+								@if (User.IsInRole("admin"))
+								{
+									<li><a asp-action="Index" asp-controller="Dashboard">Dashboard</a></li>
+								}
 							</ul>
 						</div>
 					</div>
