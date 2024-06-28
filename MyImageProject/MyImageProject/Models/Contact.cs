@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyImageProject.Models
@@ -14,7 +15,7 @@ namespace MyImageProject.Models
 		[Required]
 		public string LastName { get; set; }
 		[Column("Email", TypeName = "varchar(20)")]
-		[Required]
+        [Required]
 		public string Email { get; set; }
 		[Column("Subject", TypeName = "varchar(max)")]
 		public string? Subject { get; set; }

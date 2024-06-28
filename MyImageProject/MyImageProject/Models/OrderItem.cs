@@ -17,7 +17,7 @@ namespace MyImageProject.Models
         [ForeignKey("PrintSizes")]
         public int SizeId { get; set; }
         [Required]
-        public int Quantity { get; set; }
+        public decimal Quantity { get; set; }
         public Order Orders { get; set; }
         public Photograph Photographs { get; set; }
         public PrintSize PrintSizes { get; set; }

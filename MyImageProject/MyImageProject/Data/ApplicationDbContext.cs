@@ -20,6 +20,7 @@ namespace MyImageProject.Data
         public DbSet<ShippingInfo> ShippingInfo { get; set; }
         public DbSet<Gallery> Gallery { get; set; }
         public DbSet<Contact> Contact { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -31,6 +32,14 @@ namespace MyImageProject.Data
             client.NormalizedName = "client";
 
             builder.Entity<IdentityRole>().HasData(admin, client);
+
+            builder.Entity<Contact>()
+            .HasIndex(u => u.Email)
+            .IsUnique();
+            
+            builder.Entity<ShippingInfo>()
+            .HasIndex(u => u.TracingNumber)
+            .IsUnique();
         }
     }
 }

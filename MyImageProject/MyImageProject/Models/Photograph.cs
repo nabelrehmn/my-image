@@ -10,7 +10,7 @@ namespace MyImageProject.Models
         public int PhotoId { get; set; }
         [Required]
         public string PhotoPath { get; set; }
-        public DateTime UploadData { get; set; }
+        public DateTime UploadDate { get; set; }
         [Required]
         [ForeignKey("Users")]
         public string UserId { get; set; }

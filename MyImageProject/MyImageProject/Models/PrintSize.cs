@@ -10,6 +10,6 @@ namespace MyImageProject.Models
         public string SizeName { get; set; }
         public string? SizeDescription { get; set; }
         [Required]
-        public string Price { get; set; }
+        public decimal Price { get; set; }
     }
 }

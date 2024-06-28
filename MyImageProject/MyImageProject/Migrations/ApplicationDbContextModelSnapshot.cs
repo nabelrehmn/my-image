@@ -51,15 +51,15 @@ namespace MyImageProject.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "50a93bdc-02fe-4d78-bccb-6c0b47113f27",
-                            ConcurrencyStamp = "ff531d9f-e05c-4bb4-b18c-51e30dd35144",
+                            Id = "57e3c6da-b5d1-4d7a-80ff-2ae8636190f5",
+                            ConcurrencyStamp = "1d5c906e-5f31-42e1-87a8-65f548218f27",
                             Name = "admin",
                             NormalizedName = "admin"
                         },
                         new
                         {
-                            Id = "a6088e65-8f2f-4e4e-a43d-d29743295616",
-                            ConcurrencyStamp = "0d37d604-4127-4d24-9889-471d1b0702bf",
+                            Id = "a48a8dca-380f-49a1-a641-bd677d335383",
+                            ConcurrencyStamp = "9647b7de-b519-4274-b0e2-e4afe1884892",
                             Name = "client",
                             NormalizedName = "client"
                         });
@@ -259,6 +259,38 @@ namespace MyImageProject.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("MyImageProject.Models.CartItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("PhotoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SizeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PhotoId");
+
+                    b.HasIndex("SizeId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("CartItems");
+                });
+
             modelBuilder.Entity("MyImageProject.Models.Contact", b =>
                 {
                     b.Property<int>("ContactId")
@@ -288,11 +320,13 @@ namespace MyImageProject.Migrations
                         .HasColumnName("Massage");
 
                     b.Property<string>("Subject")
-                        .IsRequired()
                         .HasColumnType("varchar(max)")
                         .HasColumnName("Subject");
 
                     b.HasKey("ContactId");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.ToTable("Contact");
                 });
@@ -374,9 +408,8 @@ namespace MyImageProject.Migrations
                     b.Property<bool>("ShippingStatus")
                         .HasColumnType("bit");
 
-                    b.Property<string>("TotalPrice")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -403,8 +436,8 @@ namespace MyImageProject.Migrations
                     b.Property<int>("PhotoId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
+                    b.Property<decimal>("Quantity")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("SizeId")
                         .HasColumnType("int");
@@ -464,7 +497,7 @@ namespace MyImageProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("UploadData")
+                    b.Property<DateTime>("UploadDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
@@ -486,9 +519,8 @@ namespace MyImageProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SizeId"), 1L, 1);
 
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("SizeDescription")
                         .HasColumnType("nvarchar(max)");
@@ -526,11 +558,14 @@ namespace MyImageProject.Migrations
 
                     b.Property<string>("TracingNumber")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("ShippingId");
 
                     b.HasIndex("OrderId");
+
+                    b.HasIndex("TracingNumber")
+                        .IsUnique();
 
                     b.ToTable("ShippingInfo");
                 });
@@ -584,6 +619,33 @@ namespace MyImageProject.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("MyImageProject.Models.CartItem", b =>
+                {
+                    b.HasOne("MyImageProject.Models.Photograph", "Photographs")
+                        .WithMany()
+                        .HasForeignKey("PhotoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyImageProject.Models.PrintSize", "PrintSizes")
+                        .WithMany()
+                        .HasForeignKey("SizeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyImageProject.Models.AppUsers", "Users")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Photographs");
+
+                    b.Navigation("PrintSizes");
+
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("MyImageProject.Models.CreditCard", b =>

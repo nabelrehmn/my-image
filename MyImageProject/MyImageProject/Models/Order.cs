@@ -12,7 +12,7 @@ namespace MyImageProject.Models
         [Required]
         public DateTime OrderDate { get; set; }
         [Required]
-        public string TotalPrice { get; set; }
+        public decimal TotalPrice { get; set; }
         [Required]
         public bool PaymentStatus { get; set; }
         [Required]

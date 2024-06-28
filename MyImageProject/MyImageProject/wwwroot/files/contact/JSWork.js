@@ -1,9 +1,14 @@
 ﻿
-$(function () {
+
+$(document).ready(function () {
+    // Initialize DataTables
     $("#example1").DataTable({
-        "responsive": true, "lengthChange": false, "autoWidth": false,
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": false,
         "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
     $('#example2').DataTable({
         "paging": true,
         "lengthChange": false,
@@ -11,23 +16,55 @@ $(function () {
         "ordering": true,
         "info": true,
         "autoWidth": false,
-        "responsive": true,
+        "responsive": true
     });
+
+    $('#contactForm').on('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Serialize form data
+        var formData = $(this).serialize();
+
+        // Send form data using AJAX
+        $.ajax({
+            type: 'POST',
+            url: '/Website/Contact', // Adjust this URL based on your routing
+            data: formData,
+            success: function (response) {
+                if (response.success) {
+                    Swal.fire({
+                        title: "Action Successful!",
+                        text: "Message has been sent!",
+                        icon: "success",
+                        confirmButtonText: "OK"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.reload();
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        title: "Error!",
+                        text: "There was an error sending your message.",
+                        icon: "error",
+                        confirmButtonText: "OK"
+                    });
+                }
+            },
+            error: function () {
+                Swal.fire({
+                    title: "Error!",
+                    text: "There was an error sending your message.",
+                    icon: "error",
+                    confirmButtonText: "OK"
+                });
+            }
+        });
+    });
+
 });
 
 
-$('#submit').on('click', function (event) {
-    Swal.fire({
-        title: "Action Succesfull!",
-        text: "Message has been Send!",
-        icon: "success",
-        confirmButtonText: "OK",
-    }).then((result) => {
-        if (result.isConfirmed) {
-            window.location.reload();
-        }
-    });
-});
 
 /* 
 $('#btndelete').on('click', function (event) {

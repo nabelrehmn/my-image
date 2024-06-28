@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyImageProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d48d35d75a000bdb82f3160a07ccd5d048898c8e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee8adf2c3d775cf44c88ea97952775f93c6d2cd6")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyImageProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyImageProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
